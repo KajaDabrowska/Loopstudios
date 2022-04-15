@@ -1,0 +1,296 @@
+:root {
+  /* White: hsl(0, 0%, 100%)
+- Black: hsl(0, 0%, 0%)
+- Dark Gray: hsl(0, 0%, 55%)
+- Very Dark Gray: hsl(0, 0%, 41%) */
+
+  /* colors */
+  --clr-black: 0, 0%, 0%;
+  --clr-gray--l: 0, 0%, 55%;
+  --clr-gray--m: 0, 0%, 41%;
+  --clr-white: 0, 0%, 100%;
+
+  /* font sizes */
+  /* --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem; */
+  --fs-500: 4rem;
+  --fs-400: 3.5rem;
+  --fs-400: 3rem;
+  --fs-300: 2.2rem;
+  --fs-200: 1.6rem;
+
+  /* font-families */
+  --ff-prim: "Alata", sans-serif;
+  --ff-accent: "Josefin Sans", sans-serif;
+  /* font weight: 300, 400 */
+
+  --p-top-sm: 2rem;
+  --p-top-m: 5rem;
+  --p-top-b: 10rem;
+  /* --flow-space: 1rem; */
+}
+
+/* --------------------- */
+/*          Reset        */
+/* --------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  /* background-color: transparent; */
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-prim);
+  font-size: var(--fs-200);
+  text-align: center;
+
+  color: hsl(var(--clr-black));
+  background-color: hsl(var(--clr-white));
+
+  line-height: 1.5;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make forms elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------- */
+/*Utility classes        */
+/* --------------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.container {
+  padding: 3rem 2rem;
+}
+
+.p-top-b {
+  padding-top: var(--p-top-b);
+}
+
+.word-no-break {
+  white-space: nowrap;
+}
+
+/*         */
+/* Layout  */
+/*        */
+
+/* ----------------- */
+/* --- HEADER ----- */
+/* --------------- */
+
+.header-bg {
+  background-image: url(./images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.header-container {
+  color: hsl(var(--clr-white));
+  height: 95vh;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: 14rem;
+}
+
+.title-deco {
+  margin-top: 50%;
+  padding: 2rem 2rem;
+  border: 2px solid hsl(var(--clr-white));
+}
+
+.header--title {
+  font-family: var(--ff-accent);
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: var(--fs-500);
+}
+
+/* ----------------- */
+/* --- NAVIGATION --- */
+/* --------------- */
+
+.mobile-nav-toggle {
+  cursor: pointer;
+  background-image: url(./images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: transparent;
+  border: none;
+  width: 2.5rem;
+  height: 2rem;
+}
+
+/*TODO remember this:  */
+.header__nav {
+  display: none;
+}
+.primary-navigation {
+  display: none;
+
+  color: hsl(var(--clr-white));
+}
+
+.primary-navigation [data-visible="true"] {
+  display: inline-block;
+}
+
+/* ------------------- */
+/* ---- DESCRIPTION ---- */
+/* -------------------- */
+.description__title {
+  font-family: var(--ff-accent);
+  font-size: var(--fs-400);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  /*TODO maybe this an utility class? or flow  */
+  margin-top: 4rem;
+}
+
+.description__text {
+  color: hsl(var(--clr-gray--l));
+  padding: 0 1rem;
+  margin-top: 2rem;
+}
+
+/* ------------------- */
+/* ---- CREATIONS ---- */
+/* -------------------- */
+.creations__title {
+  font-family: var(--ff-accent);
+  font-size: var(--fs-400);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: 4rem;
+}
+
+.creations__btn {
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  /* word-spacing: 0.4rem; */
+  padding: 0.6rem 3rem;
+}
+
+/* -------------------- */
+/* ------ FOOTER ------ */
+/* -------------------- */
+.footer {
+  background-color: hsl(var(--clr-black));
+  color: hsl(var(--clr-white));
+}
+
+.footer-nav .primary-navigation {
+  display: inline-block;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ---------------------- */
+/* --- MEDIA QUERIES --- */
+/* -------------------- */
+@media (min-width: 60.1em) {
+  body {
+    text-align: left;
+  }
+}
