@@ -31,7 +31,7 @@
       <div class="header-container header-bg container">
         <div class="header-flex">
           <!-- LOGO -->
-          <img src="./images/logo.svg" alt="Loopstudios" class="header__logo" />
+          <img src="./images/logo.svg" alt="Loopstudios" class="logo" />
 
           <!-- MENU HAMBURGER -->
           <button class="mobile-nav-toggle">
@@ -39,8 +39,12 @@
           </button>
 
           <!-- NAVIGATION -->
-          <nav aria-label="primary navigation" class="header__nav">
-            <ul class="primary-navigation" data-visible="false">
+          <nav
+            aria-label="primary navigation"
+            class="primary-navigation"
+            id="primary-navigation"
+          >
+            <ul class="navigation navigation--header" data-visible="false">
               <li>
                 <a href="#">About</a>
               </li>
@@ -129,7 +133,7 @@
                 />
               </picture>
 
-              <figcaption>Deep earth</figcaption>
+              <figcaption class="card__caption">Deep earth</figcaption>
             </figure>
 
             <!-- Card 2 -->
@@ -149,7 +153,7 @@
                 />
               </picture>
 
-              <figcaption>Night arcade</figcaption>
+              <figcaption class="card__caption">Night arcade</figcaption>
             </figure>
 
             <!-- Card 3 -->
@@ -169,7 +173,7 @@
                 />
               </picture>
 
-              <figcaption>Soccer team VR</figcaption>
+              <figcaption class="card__caption">Soccer team VR</figcaption>
             </figure>
 
             <!-- Card 4 -->
@@ -186,7 +190,7 @@
                 <img src="./images/desktop/image-grid.jpg" alt="race car" />
               </picture>
 
-              <figcaption>The grid</figcaption>
+              <figcaption class="card__caption">The grid</figcaption>
             </figure>
 
             <!-- Card 5 -->
@@ -206,7 +210,7 @@
                 />
               </picture>
 
-              <figcaption>From up above VR</figcaption>
+              <figcaption class="card__caption">From up above VR</figcaption>
             </figure>
 
             <!-- Card 6 -->
@@ -226,7 +230,7 @@
                 />
               </picture>
 
-              <figcaption>Pocket borealis</figcaption>
+              <figcaption class="card__caption">Pocket borealis</figcaption>
             </figure>
 
             <!-- Card 7 -->
@@ -246,12 +250,12 @@
                 />
               </picture>
 
-              <figcaption>The curiosity</figcaption>
+              <figcaption class="card__caption">The curiosity</figcaption>
             </figure>
 
             <!-- Card 8 -->
             <figure class="creations__card">
-              <picture>
+              <picture class="">
                 <source
                   media="(max-width: 60em)"
                   srcset="./images/mobile/image-fisheye.jpg"
@@ -266,7 +270,7 @@
                 />
               </picture>
 
-              <figcaption>Make it fisheye</figcaption>
+              <figcaption class="card__caption">Make it fisheye</figcaption>
             </figure>
           </div>
         </div>
@@ -278,13 +282,13 @@
     <!-- -------------- -->
     <footer class="footer container">
       <div class="footer-nav">
-        <div class="">
+        <div class="flex">
           <!-- LOGO -->
-          <img src="./images/logo.svg" alt="Loopstudios" class="header__logo" />
+          <img src="./images/logo.svg" alt="Loopstudios" class="logo" />
 
           <!-- 1 NAVIGATION -->
           <nav aria-label="primary navigation" class="footer-nav">
-            <ul class="primary-navigation" data-visible="false">
+            <ul class="navigation navigation--footer" data-visible="false">
               <li>
                 <a href="#">About</a>
               </li>
@@ -315,17 +319,17 @@
               </li>
               <li>
                 <a href="#"
-                  ><img src="./images/icon-instagram.svg" alt="instagram"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
                   ><img src="./images/icon-twitter.svg" alt="twitter"
                 /></a>
               </li>
               <li>
                 <a href="#"
                   ><img src="./images/icon-pinterest.svg" alt="pinterest"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/icon-instagram.svg" alt="instagram"
                 /></a>
               </li>
             </ul>
