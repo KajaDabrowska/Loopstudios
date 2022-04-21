@@ -26,7 +26,9 @@
     <title>Loopstudios</title>
   </head>
   <body>
-    <!--TODO skip link  -->
+    <!-- SKIP LINK -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <header>
       <div class="header-container header-bg container">
         <div class="header-flex">
@@ -34,7 +36,7 @@
           <img src="./images/logo.svg" alt="Loopstudios" class="logo" />
 
           <!-- MENU HAMBURGER -->
-          <button class="mobile-nav-toggle">
+          <button class="mobile-nav-toggle" aria-expanded="false">
             <span class="sr-only mobile-nav-toggle__span">Menu</span>
           </button>
 
@@ -43,8 +45,10 @@
             aria-label="primary navigation"
             class="primary-navigation"
             id="primary-navigation"
+            data-visible="false"
+            aria-hidden="true"
           >
-            <ul class="navigation navigation--header" data-visible="false">
+            <ul class="navigation navigation--header">
               <li>
                 <a href="#">About</a>
               </li>
@@ -65,8 +69,10 @@
         </div>
 
         <!-- HEADING  -->
-        <div class="title-deco">
-          <h1 class="header--title">Immersive experiences that deliver</h1>
+        <div class="">
+          <h1 class="header--title title-deco">
+            Immersive experiences that deliver
+          </h1>
         </div>
       </div>
     </header>
@@ -74,7 +80,7 @@
     <!-- -------------- -->
     <!-----  MAIN ----- -->
     <!-- -------------- -->
-    <main>
+    <main id="main">
       <div class="container p-top-b">
         <!-- IMAGE -->
         <picture>
@@ -288,7 +294,7 @@
 
           <!-- 1 NAVIGATION -->
           <nav aria-label="primary navigation" class="footer-nav">
-            <ul class="navigation navigation--footer" data-visible="false">
+            <ul class="navigation navigation--footer">
               <li>
                 <a href="#">About</a>
               </li>

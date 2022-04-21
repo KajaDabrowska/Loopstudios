@@ -1,5 +1,4 @@
 const menuBtn = document.querySelector(".mobile-nav-toggle");
-const menuSpan = document.querySelector(".mobile-nav-toggle__span");
 const primNav = document.getElementById("primary-navigation");
 
 menuBtn.addEventListener("click", () => {
