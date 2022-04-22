@@ -2,18 +2,6 @@
 
 This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-
-## Overview
-
 ### The challenge
 
 Users should be able to:
@@ -23,8 +11,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://loopstudios-kaja.netlify.app/)
 
 ## My process
 
@@ -33,30 +20,18 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Grid
+- HTML: desktop-first, CSS: mobile-first
 
 ### What I learned
 
-<!--TODO  -->
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- For z-index to work the element must have a set position or be a flex item.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.element-with-index {
+  position: relative;
+  z-index: -1;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
+- Negative z-index on an element can mess up hover on elements that are children of it. (Or at least that's what seems to have caused the problem in my project?)
