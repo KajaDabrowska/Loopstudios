@@ -187,7 +187,7 @@ select {
 
 .container--header {
   color: hsl(var(--clr-white));
-  height: 95vh;
+  height: 100vh;
   padding-top: 4rem;
 }
 
@@ -305,7 +305,6 @@ select {
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
-  /*TODO maybe this an utility class? or flow  */
   margin-top: 4rem;
 }
 
@@ -368,6 +367,10 @@ select {
 /* -------------------- */
 /* ------ CARDS ------- */
 /* -------------------- */
+.creations__link:focus-visible {
+  outline-offset: 0.7rem;
+}
+
 .creations__card {
   cursor: pointer;
   position: relative;
@@ -387,7 +390,6 @@ select {
   );
 }
 
-/*TODO these are actually links?  */
 .card__caption {
   z-index: 3000;
   position: absolute;
@@ -602,8 +604,8 @@ select {
     bottom: 0;
     right: 0;
     max-width: calc(50% - 1rem);
-    padding-top: clamp(5rem, 9vw + 1rem, 14rem);
-    padding-left: clamp(7rem, 8vw + 1rem, 14rem);
+    padding-top: clamp(5rem, 8vw + 1rem, 20rem);
+    padding-left: clamp(7rem, 8vw + 1rem, 16rem);
   }
 
   .description__image {
